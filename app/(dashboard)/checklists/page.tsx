@@ -197,7 +197,7 @@ export default function ChecklistsPage() {
               )}
               {searchQuery && (
                 <Badge variant="secondary">
-                  Search: "{searchQuery}"
+                  Search: {searchQuery}
                 </Badge>
               )}
             </div>

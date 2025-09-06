@@ -108,7 +108,7 @@ export default function AdminPage() {
             <div className="text-6xl mb-4">🔒</div>
             <h1 className="text-2xl font-bold mb-2">Access Denied</h1>
             <p className="text-muted-foreground">
-              You don't have permission to access the admin panel.
+              You do <noscript></noscript>t have permission to access the admin panel.
             </p>
           </CardContent>
         </Card>
