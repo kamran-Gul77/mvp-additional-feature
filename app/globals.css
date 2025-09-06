@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 10 10% 4%;
+    --foreground: 30 100% 97%;
+    --card: 10 10% 6%;
+    --card-foreground: 30 100% 97%;
+    --popover: 10 10% 6%;
+    --popover-foreground: 30 100% 97%;
+    --primary: 25 95% 53%;
+    --primary-foreground: 10 10% 4%;
+    --secondary: 10 10% 12%;
+    --secondary-foreground: 30 100% 97%;
+    --muted: 10 10% 12%;
+    --muted-foreground: 30 10% 60%;
+    --accent: 10 10% 12%;
+    --accent-foreground: 30 100% 97%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 30 100% 97%;
+    --border: 10 10% 12%;
+    --input: 10 10% 12%;
+    --ring: 25 95% 53%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent;
+  }
+  
+  .hero-glow {
+    @apply shadow-2xl shadow-orange-500/20;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/10 hover:-translate-y-1;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground));
+}
